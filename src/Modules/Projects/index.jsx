@@ -11,15 +11,15 @@ const Project = ({ img, title, text, url, github }) => {
     return (
         <article className='project'>
             {github !== null && (
-                <a className='github' aria-label={`Github Repository - ${title}`} href={github}>
+                <a className='github' aria-label={`Github Repository - ${title}`} href={github} target='_blank' rel='noopener noreferrer'>
                     <FaGithub />
                 </a>
             )}
-            <a className='img-wrapper' href={url}>
+            <a className='img-wrapper' target='_blank' rel='noopener noreferrer' href={url}>
                 <img className='full-image' src={img} alt={title} />
             </a>
             <div className='text'>
-                <a href={url}>
+                <a target='_blank' rel='noopener noreferrer' href={url}>
                     <h3>{title}</h3>
                 </a>
                 <p>{text}</p>
@@ -57,8 +57,8 @@ const Projects = () => {
             img: Calc,
             title: 'Simple React Calc',
             text: 'Aplikacja internetowa zawierająca kalkulator prosty do podstawowych obliczeń',
-            url: '/projects/calc/',
-            github: 'https://github.com/r-urbanski/simple-react-calculator',
+            url: '/projekty/simple-react-calc/',
+            github: 'https://github.com/r-urbanski/simple-react-calc',
         },
     ]
 
