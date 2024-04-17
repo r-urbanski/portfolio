@@ -1,0 +1,119 @@
+section#o-mnie {
+    padding-block: $section-padding;
+
+    section#skills-wrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 2rem;
+
+        article.skill {
+            border-radius: 10px;
+            background-color: $body-bg-secondary;
+            width: 25%;
+
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+            opacity: 0;
+            transform: translateY(20%);
+
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+            div.skill-inner {
+                height: 100%;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+
+                img {
+                    width: 35%;
+                }
+
+                h3 {
+                    text-align: center;
+                    margin-block: 1rem 0rem;
+                }
+
+                p {
+                    text-align: center;
+                    color: $text-color-secondary;
+                    font-weight: 300;
+                }
+            }
+        }
+        &.skills-show {
+            article.skill {
+                opacity: 1;
+                transform: translateY(0);
+
+                &:nth-of-type(1) {
+                    transition-delay: 0.2s;
+                }
+
+                &:nth-of-type(2) {
+                    transition-delay: 0.4s;
+                }
+
+                &:nth-of-type(3) {
+                    transition-delay: 0.6s;
+                }
+
+                &:nth-of-type(4) {
+                    transition-delay: 0.8s;
+                }
+            }
+        }
+    }
+
+    @include media(xl) {
+        section#skills-wrapper {
+            flex-wrap: wrap;
+
+            article.skill {
+                width: calc(50% - 1rem);
+
+                div.skill-inner {
+                    img {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media(md) {
+        padding-block: $section-padding-md;
+
+        section#skills-wrapper {
+            justify-content: center;
+            article.skill {
+                width: 60%;
+
+                div.skill-inner {
+                    img {
+                        width: 25%;
+                    }
+
+                    h3 {
+                        font-size: 1.25rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media(sm) {
+        section#skills-wrapper {
+            article.skill {
+                width: 90%;
+            }
+        }
+    }
+}

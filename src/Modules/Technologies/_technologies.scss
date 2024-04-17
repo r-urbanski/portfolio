@@ -1,0 +1,63 @@
+section#technologies {
+    padding-block: $section-padding;
+    background-color: $body-bg-secondary;
+
+    section.tech-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        article.tech {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            border-radius: 10px;
+            background-color: mix(#fff, $body-bg-primary, 3%);
+            padding: 0.5rem 1rem;
+
+            opacity: 0;
+            transform: translateX(-25%);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+            svg {
+                font-size: 2rem;
+            }
+
+            h3 {
+                margin: 0;
+            }
+        }
+
+        &.techs-show {
+            article.tech {
+                opacity: 1;
+                transform: translateX(0);
+
+                @for $i from 1 through 17 {
+                    &:nth-of-type(#{$i}) {
+                        transition-delay: 0.04s * $i;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media(md) {
+        padding-block: $section-padding-md;
+        padding-inline: $section-padding-sm;
+    }
+
+    @include media(sm) {
+        section.tech-wrapper {
+            align-items: stretch;
+            article.tech {
+                h3 {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

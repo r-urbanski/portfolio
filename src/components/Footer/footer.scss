@@ -1,0 +1,42 @@
+@import '../../styles/partials/var';
+@import '../../styles/partials/mixins';
+
+footer#footer {
+    background-color: $body-bg-secondary;
+
+    div.module {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: 1rem;
+    }
+
+    aside {
+        p {
+            margin: 0;
+
+            span {
+                color: $text-color-secondary;
+            }
+        }
+    }
+
+    section {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        a {
+            font-size: 1.5rem;
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+    @include media(sm) {
+        div.module {
+            flex-direction: column-reverse;
+            gap: 1rem;
+        }
+    }
+}

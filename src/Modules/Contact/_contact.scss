@@ -1,0 +1,171 @@
+section#kontakt {
+    padding-block: $section-padding;
+
+    section#contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        aside {
+            width: 60%;
+            text-align: center;
+            margin-bottom: 2rem;
+
+            opacity: 0;
+            transform: translateY(20%);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+            &.para-show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        div.a-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem;
+
+            &.contacts-show {
+                a.contact {
+                    opacity: 1;
+                    transform: translateY(0);
+
+                    &:nth-of-type(1) {
+                        transition-delay: 0.2s;
+                    }
+
+                    &:nth-of-type(2) {
+                        transition-delay: 0.4s;
+                    }
+
+                    &:nth-of-type(3) {
+                        transition-delay: 0.6s;
+                    }
+                }
+            }
+
+            a.contact {
+                background-color: $body-bg-secondary;
+                border-radius: 10px;
+                padding: 1rem 2rem;
+                box-shadow: $box-shadow;
+
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                opacity: 0;
+                transform: translateY(20%);
+                transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+                -webkit-tap-highlight-color: transparent;
+
+                &:hover {
+                    color: unset;
+                    svg,
+                    h3 {
+                        color: $primary-text;
+                    }
+                }
+
+                svg,
+                h3 {
+                    transition: color 0.3s ease-in-out;
+                }
+
+                svg {
+                    font-size: 3rem;
+                }
+
+                article.contact-text {
+                    p {
+                        margin: 0;
+                        color: $text-color-secondary;
+                    }
+                    h3 {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media(xl) {
+        section#contact-wrapper {
+            div.a-wrapper {
+                a.contact {
+                    article.contact-text {
+                        h3 {
+                            margin: 0;
+                            font-size: 1.25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media(lg) {
+        section#contact-wrapper {
+            aside {
+                width: 100%;
+            }
+
+            div.a-wrapper {
+                justify-content: center;
+                a.contact {
+                    padding: 1rem;
+                    &.github,
+                    &.linkedin {
+                        order: 2;
+                        // width: calc(50% - 0.5rem);
+                    }
+                    &.email {
+                        order: 1;
+                        // width: 100%;
+                    }
+
+                    article.contact-text {
+                        h3 {
+                            margin: 0;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media(md) {
+        padding-block: $section-padding-md;
+        padding-inline: $section-padding-sm;
+
+        section#contact-wrapper {
+            div.a-wrapper {
+                a.contact {
+                    flex-direction: column;
+                    text-align: center;
+                    width: 100%;
+
+                    &.github,
+                    &.linkedin {
+                        order: 2;
+                    }
+
+                    &.email {
+                        order: 1;
+                    }
+
+                    article.contact-text {
+                        h3 {
+                            margin: 0;
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

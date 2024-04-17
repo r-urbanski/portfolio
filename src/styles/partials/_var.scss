@@ -1,0 +1,32 @@
+// colors
+$primary-bg: #007acc;
+$primary-text: #0099ff;
+
+$text-color-primary: #ffffff;
+$text-color-secondary: rgba(#ffffff, 0.8);
+
+$body-bg-primary: #252525;
+$body-bg-primary2: mix(#fff, $body-bg-primary, 5%);
+$body-bg-secondary: #1e1e1e;
+
+$box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+// fonts
+$font-family: 'Poppins';
+
+$font-size: 1rem;
+
+$p-font-size: $font-size * 1.125;
+$a-font-size: $font-size * 1.125;
+$btn-font-size: $font-size * 1.25;
+
+$h1-font-size: $font-size * 2.5;
+$h2-font-size: $font-size * 2;
+$h3-font-size: $font-size * 1.5;
+$h4-font-size: $font-size * 1.25;
+$h5-font-size: $font-size * 1;
+
+$section-padding: 7rem;
+$section-padding-md: 5rem;
+
+$section-padding-sm: 1.25rem;

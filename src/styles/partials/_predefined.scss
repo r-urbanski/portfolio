@@ -1,0 +1,118 @@
+@import 'var';
+@import 'mixins';
+
+// module class, something like container in bootstrap
+.module,
+.full-module {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: $section-padding-sm;
+}
+@include modules;
+
+img.full-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.bg-opacity {
+    background-color: rgba($body-bg-primary, 0.7);
+}
+
+.blue-text {
+    color: $primary-text;
+}
+
+aside.header-section {
+    opacity: 0;
+    transform: translateY(20%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    p {
+        color: $primary-text;
+    }
+
+    h2 {
+        font-weight: 400;
+    }
+
+    &.text-header-show {
+        opacity: 1;
+        transform: translateY(0);
+
+        // span {
+        //     &::after {
+        //         transition-delay: 0.2s;
+        //         width: 100%;
+        //     }
+        // }
+    }
+
+    // span {
+    //     position: relative;
+    //     &::after {
+    //         content: '';
+    //         position: absolute;
+    //         top: 110%;
+    //         left: 50%;
+    //         transform: translateX(-50%);
+    //         height: 2px;
+    //         width: 0;
+    //         background-color: $primary-text;
+    //         transition: width 0.3s ease-in;
+
+    //         @include media(sm) {
+    //             width: 0 !important;
+    //         }
+    //     }
+    // }
+}
+
+a.primary-button,
+button.primary-button {
+    border: none;
+    background-color: $primary-bg;
+    font-size: $btn-font-size;
+    padding: 0.75rem 2rem;
+    border-radius: 100px;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        color: unset;
+        background-color: mix(#000, $primary-bg, 15%);
+    }
+}
+
+a.secondary-button,
+button.secondary-button {
+    border: none;
+    background-color: #fff;
+    font-size: $btn-font-size;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+        background-color: mix(#000, #fff, 15%);
+    }
+}
+
+a.github-button,
+button.github-button {
+    border: none;
+    background-color: #010409;
+    padding: 0.5rem 1rem;
+    font-size: $btn-font-size;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+        background-color: mix(#fff, #010409, 5%);
+        color: unset;
+    }
+}

@@ -1,0 +1,92 @@
+section#hero-section {
+    background-image: url('../../assets/images/coding.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+
+    div.module {
+        padding-top: 80px;
+        max-height: 1000px;
+        height: 100svh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+        transition: height 0.3s ease-in-out;
+    }
+
+    aside,
+    figure {
+        opacity: 0;
+        transition: opacity 0.75s ease-in-out;
+    }
+
+    aside {
+        width: 60%;
+        h1 {
+            font-size: 5.5rem;
+            font-weight: 300;
+            margin: 0;
+            text-shadow: 1px 3px 11px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            margin-block: 2rem;
+        }
+    }
+
+    figure {
+        width: 40%;
+    }
+
+    &.section-show {
+        aside,
+        figure {
+            opacity: 1;
+        }
+    }
+
+    @include media-custom(2200px) {
+        div.module {
+            max-height: unset;
+        }
+    }
+
+    @include media(xxl) {
+        aside {
+            h1 {
+                font-size: 4.75rem;
+            }
+        }
+    }
+
+    @include media(xl) {
+        aside {
+            h1 {
+                font-size: 4rem;
+            }
+        }
+    }
+
+    @include media(lg) {
+        div.module {
+            flex-direction: column-reverse;
+            gap: 2rem;
+            padding-top: 60px;
+        }
+
+        aside {
+            text-align: center;
+            width: 100%;
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        figure {
+            width: 50%;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import 'partials/var';
+@import 'partials/mixins';
+@import 'partials/reset';
+@import 'partials/predefined';
+@import 'partials/keyframes';
+
+main#home-page {
+    @import '../Modules/Hero/hero';
+    @import '../Modules/Skills/skills';
+    @import '../Modules/Technologies/technologies';
+    @import '../Modules/Projects/projects';
+    @import '../Modules/Experience/experience';
+    @import '../Modules/Contact/contact';
+}
