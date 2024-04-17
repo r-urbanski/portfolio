@@ -32,15 +32,15 @@ section#kontakt {
                     opacity: 1;
                     transform: translateY(0);
 
-                    &:nth-of-type(1) {
+                    &.github {
                         transition-delay: 0.2s;
                     }
 
-                    &:nth-of-type(2) {
+                    &.email {
                         transition-delay: 0.4s;
                     }
 
-                    &:nth-of-type(3) {
+                    &.linkedin {
                         transition-delay: 0.6s;
                     }
                 }
@@ -115,16 +115,31 @@ section#kontakt {
 
             div.a-wrapper {
                 justify-content: center;
+
+                &.contacts-show {
+                    a.contact {
+                        &.email {
+                            transition-delay: 0.2s;
+                        }
+
+                        &.github {
+                            transition-delay: 0.4s;
+                        }
+
+                        &.linkedin {
+                            transition-delay: 0.6s;
+                        }
+                    }
+                }
+
                 a.contact {
                     padding: 1rem;
                     &.github,
                     &.linkedin {
                         order: 2;
-                        // width: calc(50% - 0.5rem);
                     }
                     &.email {
                         order: 1;
-                        // width: 100%;
                     }
 
                     article.contact-text {
@@ -148,15 +163,6 @@ section#kontakt {
                     flex-direction: column;
                     text-align: center;
                     width: 100%;
-
-                    &.github,
-                    &.linkedin {
-                        order: 2;
-                    }
-
-                    &.email {
-                        order: 1;
-                    }
 
                     article.contact-text {
                         h3 {
