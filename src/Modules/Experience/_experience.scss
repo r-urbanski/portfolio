@@ -199,7 +199,7 @@ section#doswiadczenie {
                     }
 
                     h5,
-                    p {
+                    p.position, p.date {
                         font-size: 1rem;
                     }
                 }
@@ -216,6 +216,8 @@ section#doswiadczenie {
         section#experience-timeline {
             article.one-position {
                 div.content {
+
+
                     h3 {
                         font-size: 1.2rem;
                     }

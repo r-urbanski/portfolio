@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import './header.scss'
 
@@ -7,6 +7,23 @@ import BrandIcon from '../../assets/images/brand-icon.webp'
 import { CgMenuGridO, CgClose } from 'react-icons/cg'
 
 const Header = () => {
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 992) {
+                const pageRoot = document.body
+                pageRoot.removeAttribute('style')
+
+                setMenuShow(false)
+                setMenuIconShow(false)
+                setIsVisible(true)
+            }
+        }
+
+        window.addEventListener('resize', handleResize)
+
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
     const [menuShow, setMenuShow] = useState(false)
     const [menuIconShow, setMenuIconShow] = useState(false)
     const [isVisible, setIsVisible] = useState(true)
