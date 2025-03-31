@@ -51,6 +51,12 @@ const Header = () => {
         }, 200)
     }
 
+    const hideMenu = () => {
+        setMenuShow(false)
+        setMenuIconShow(false)
+        document.body.removeAttribute('style')
+    }
+
     return (
         <header id='header'>
             <div className='module'>
@@ -72,7 +78,7 @@ const Header = () => {
                     <ul>
                         {links.map(({ name, href }, index) => (
                             <li key={index}>
-                                <a className='link' href={href}>
+                                <a className='link' href={href} onClick={hideMenu}>
                                     {name}
                                 </a>
                             </li>

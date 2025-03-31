@@ -3,7 +3,9 @@ import { useObserver } from '../../hooks/useObserver'
 
 import Integra from '../../assets/images/projects/integra.webp'
 import TomaszUrbanski from '../../assets/images/projects/tomasz-urbanski.png'
+import McLogCalc from '../../assets/images/projects/mc-log-calc.webp'
 import Calc from '../../assets/images/projects/calc.webp'
+import Portfolio from '../../assets/images/projects/portfolio.webp'
 
 import { FaGithub } from 'react-icons/fa6'
 
@@ -54,9 +56,23 @@ const Projects = () => {
             github: null,
         },
         {
+            img: McLogCalc,
+            title: 'Minecraft Log Calculator',
+            text: 'Aplikacja do obliczania zapotrzebowania "Logów" w popularnej grze Minecraft',
+            url: '/projekty/minecraft-log-calculator',
+            githuB: 'https://github.com/r-urbanski/minecraft-log-calculator',
+        },
+        {
             img: Calc,
             title: 'Simple React Calc',
             text: 'Aplikacja internetowa zawierająca kalkulator prosty do podstawowych obliczeń',
+            url: '/projekty/simple-react-calc/',
+            github: 'https://github.com/r-urbanski/simple-react-calc',
+        },
+        {
+            img: Portfolio,
+            title: 'Portfolio Web Deva',
+            text: 'Strona internetowa z moimi projektami, informacjami o moich umiejętnościach i karierze zawodowej.',
             url: '/projekty/simple-react-calc/',
             github: 'https://github.com/r-urbanski/simple-react-calc',
         },
