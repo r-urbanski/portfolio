@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { useObserver } from '../../hooks/useObserver'
 
 import Integra from '../../assets/images/projects/integra.webp'
-import Portfolio from '../../assets/images/projects/portfolio.webp'
+import TomaszUrbanski from '../../assets/images/projects/tomasz-urbanski.png'
 import Calc from '../../assets/images/projects/calc.webp'
 
 import { FaGithub } from 'react-icons/fa6'
@@ -47,11 +47,11 @@ const Projects = () => {
             github: null,
         },
         {
-            img: Portfolio,
-            title: 'Web Dev Portfolio',
-            text: 'Strona internetowa wykazująca moje projekty i umiejętności w zakresie programowania',
-            url: 'https://rurbanski.pl',
-            github: 'https://github.com/r-urbanski/portfolio',
+            img: TomaszUrbanski,
+            title: 'Tomasz Urbański - autor',
+            text: 'Strona internetowa autora książki "Sylvester Stallone. Nie tylko Rocky i Rambo"',
+            url: 'https://tomasz-urbanski.pl',
+            github: null,
         },
         {
             img: Calc,

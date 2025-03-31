@@ -56,6 +56,7 @@ section#projekty {
                     transition: scale 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
                     object-fit: cover;
                     height: 100%;
+                    object-position: top;
                     vertical-align: middle;
 
                     &:hover {
