@@ -60,7 +60,7 @@ const Projects = () => {
             title: 'Minecraft Log Calculator',
             text: 'Aplikacja do obliczania zapotrzebowania "Logów" w popularnej grze Minecraft',
             url: '/projekty/minecraft-log-calculator',
-            githuB: 'https://github.com/r-urbanski/minecraft-log-calculator',
+            github: 'https://github.com/r-urbanski/minecraft-log-calculator',
         },
         {
             img: Calc,
@@ -73,8 +73,8 @@ const Projects = () => {
             img: Portfolio,
             title: 'Portfolio Web Deva',
             text: 'Strona internetowa z moimi projektami, informacjami o moich umiejętnościach i karierze zawodowej.',
-            url: '/projekty/simple-react-calc/',
-            github: 'https://github.com/r-urbanski/simple-react-calc',
+            url: '/',
+            github: 'https://github.com/r-urbanski/portfolio',
         },
     ]
 
