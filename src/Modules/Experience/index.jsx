@@ -30,7 +30,7 @@ const Experience = () => {
         { name: 'General Informatics', position: 'Fullstack Web Developer', time: '21.06.2023 - obecnie', url: 'https://generalinformatics.pl' },
         { name: 'General Informatics', position: 'Staż Zawodowy - Programista', time: '19.04.2023 - 21.06.2023', url: 'https://generalinformatics.pl' },
         { name: 'Freelancer', position: 'Fullstack Web Developer', time: '2021 - obecnie', url: null },
-        { name: 'Technikum Informatyczne SCI', position: 'Kierunek: technik informatyk', time: '2020 - obecnie', url: 'https://www.sci.edu.pl/' },
+        { name: 'Technikum Informatyczne SCI', position: 'Kierunek: technik informatyk', time: '2020 - 2025', url: 'https://www.sci.edu.pl/' },
     ]
 
     return (

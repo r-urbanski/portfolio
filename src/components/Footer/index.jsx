@@ -3,12 +3,14 @@ import './footer.scss'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa6'
 
 const Footer = () => {
+    const date = new Date().getFullYear()
+
     return (
         <footer id='footer'>
             <div className='module'>
                 <aside>
                     <p>
-                        <span>&copy; 2024</span> Robert Urbański
+                        <span>&copy; {date}</span> Robert Urbański
                     </p>
                 </aside>
                 <section>

@@ -3,6 +3,7 @@ import { useObserver } from '../../hooks/useObserver'
 
 import Integra from '../../assets/images/projects/integra.webp'
 import TomaszUrbanski from '../../assets/images/projects/tomasz-urbanski.png'
+import Revitamed from '../../assets/images/projects/revitamed.png'
 import McLogCalc from '../../assets/images/projects/mc-log-calc.webp'
 import Calc from '../../assets/images/projects/calc.webp'
 import Portfolio from '../../assets/images/projects/portfolio.webp'
@@ -44,7 +45,7 @@ const Projects = () => {
         {
             img: Integra,
             title: 'Integra Nieruchomości',
-            text: 'Strona internetowa dla firmy Integra Nieruchomośći zajmującej się skupem nieruchomości',
+            text: 'Strona internetowa dla firmy Integra Nieruchomości, zajmującej się skupem nieruchomości',
             url: 'https://integra-nieruchomosci.pl',
             github: null,
         },
@@ -53,6 +54,13 @@ const Projects = () => {
             title: 'Tomasz Urbański - autor',
             text: 'Strona internetowa autora książki "Sylvester Stallone. Nie tylko Rocky i Rambo"',
             url: 'https://tomasz-urbanski.pl',
+            github: null,
+        },
+        {
+            img: Revitamed,
+            title: 'Revitamed',
+            text: 'Strona internetowa dla firmy Revitamed, zajmującej się podologią i medycyną estetyczną',
+            url: 'https://revitamed.eu',
             github: null,
         },
         {

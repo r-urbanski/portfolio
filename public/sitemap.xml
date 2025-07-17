@@ -13,4 +13,10 @@
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
+<url>
+  <loc>https://rurbanski.pl/projekty/minecraft-log-calculator/</loc>
+  <lastmod>2024-04-17T20:42:03+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>
